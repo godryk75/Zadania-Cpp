@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int sumaCiaguLiczb(int liczba)
+{	
+	int suma = 0;
+	int cyfra = 0;
+	while(liczba)
+	{
+		cyfra = liczba % 10;
+		suma += cyfra;
+		liczba /= 10;
+	}
+	return suma;
+}
+int main()
+{
+	int a = 1000123;
+	cout<<sumaCiaguLiczb(a);
+}
