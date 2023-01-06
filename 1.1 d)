@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool czyPrzestepny(int rok)
+{
+	if((rok%4==0 && rok%100!=0) || rok%400==0)
+	return true;
+	return false;
+}
+int main()
+{
+	int rok=1700;
+	cout<<czyPrzestepny(rok);
+}
