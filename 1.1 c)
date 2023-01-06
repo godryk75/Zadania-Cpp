@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+void quadraticFormula(double a, double b, double c)
+{
+	double delta = (b*b)-4*a*c;
+	if(delta > 0)
+	{
+		double x1,x2;
+		x1=(-b-(sqrt(delta)))/(2*a);
+		x2=(-b+(sqrt(delta)))/(2*a);
+		cout << "Delta > 0 " << x1 << " " << x2;
+	}
+	if(delta == 0)
+	{
+		double x0 = -b/(2*a);
+		cout << "Delta = 0" << x0;
+	}
+	if(delta < 0)
+	cout << "Brak rozwiazan";
+	
+}
+int main()
+{
+	int a=1;
+	int b=2;
+	int c=-5;
+	quadraticFormula(a,b,c);
+}
