@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int silnia(int a)
+{	
+	if(a == 0) return 1;
+	int silnia = 1;
+	for(int i = 1; i <= a; i++)
+		silnia *= i;
+	return silnia;
+}
+int main()
+{
+	cout<<silnia(4);
+}
