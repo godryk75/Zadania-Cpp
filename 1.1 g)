@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool czyPierwsza(int a)
+{	
+	if(a == 0 || a == 1) return false;
+	int pierwiastek = sqrt(a);
+	for(int i = 2; i <= pierwiastek; i++)
+	{
+		if(a%i == 0) return false;
+	}
+	return true;
+}
+int main()
+{
+	cout<<czyPierwsza(3);
+}
