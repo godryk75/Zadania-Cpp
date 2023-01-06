@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int min(int a, int b, int c)
+{
+	int min = a;
+	if(min > b) min = b;
+	if(min > c) min = c;
+	
+}
+int main()
+{
+	int a=4;
+	int b=-3;
+	int c=-3;
+	cout<<min(a,b,c);
+}
