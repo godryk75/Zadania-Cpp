@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool czyPalindrom(int liczba)
+{	int pom = liczba;
+	int nowa=0;
+	int cyfra;
+	while(pom)
+	{
+		cyfra = pom % 10;
+		nowa += cyfra;
+		nowa*=10;
+		pom/=10;
+	}
+	nowa/=10;
+	if(nowa==liczba) return true;
+	return false;
+}
+int main()
+{	
+	int a = 1221;
+	cout<<czyPalindrom(a);
+}
