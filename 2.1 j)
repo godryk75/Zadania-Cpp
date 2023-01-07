@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool czyDoskonala(int liczba)
+{
+	int sumaDzielnikow=1;
+	for(int i=2;i<liczba;i++)
+	{
+		if(liczba%i==0)	sumaDzielnikow+=i;
+			
+	}
+	if(sumaDzielnikow==liczba) return true;
+	return false;
+}
+int main()
+{	
+	int liczba=28;
+	cout<<czyDoskonala(liczba);
+}
