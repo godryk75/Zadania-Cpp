@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+void dec2bin(int liczba)
+{
+	string nowa="";
+	while(liczba)
+	{
+		int cyfra;
+		cyfra=liczba%2;
+		liczba/=2;
+		nowa+=char(cyfra+48);
+	}
+	reverse(nowa.begin(), nowa.end());
+	cout<<nowa;
+	
+}
+int main()
+{	
+	int liczba=10;
+	dec2bin(liczba);
+}
