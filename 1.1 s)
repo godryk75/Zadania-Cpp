@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int any2dec(string liczba, int sys){
+    int wynik=0;
+    reverse(liczba.begin(), liczba.end());
+    for(int i=0;i<liczba.size();i++)
+    {
+        int cyfra;
+        cyfra=liczba[i]-48;
+        wynik+=cyfra*pow(sys,i);
+    }
+    return wynik;
+}
+string dec2any(int liczba, int sys){
+    string wynik="";
+    while(liczba){
+        int cyfra;
+        cyfra=(liczba%sys);
+        wynik+=char(cyfra)+48;
+        liczba/=sys;
+    }
+    reverse(wynik.begin(), wynik.end());
+    return wynik;
+}
+int main(){
+    int sys;
+    int pom;
+    int liczba1;
+    int zamiana;
+    string liczba2;
+    cout << "Podaj system liczbowy liczby n" << endl;
+    cin >> sys;
+    if(sys==10){
+        cout << "Podaj liczbe" << endl;
+        cin >> liczba1;
+        cout << "Na jaki system zamienic liczbe?" << endl;
+        cin>>zamiana;
+        cout << dec2any(liczba1,zamiana) << endl;
+    }
+    else{
+        cout << "Podaj liczbe" << endl;
+        cin >> liczba2;
+        cout << "Na jaki system zamienic liczbe?" << endl;
+        cin>>zamiana;
+        pom=any2dec(liczba2,sys);
+        cout<<dec2any(pom,zamiana);
+    }
+ 
+return 0;
+}
