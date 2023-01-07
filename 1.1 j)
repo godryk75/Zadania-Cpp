@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int maxLista(int tab[], int n)
+{	
+	int max = tab[0];
+	for(int i=1; i<n; i++)
+	{	
+		if(tab[i]>max) max = tab[i];
+	}
+	return max;
+}
+int main()
+{	int n = 10;
+	int tab[n] = {10,3,5,8,54,8,9,3,4,46};
+	cout<<maxLista(tab, n);
+	// w funkcji w tablicy nie musimy podawać rozmiaru, chyba że dwuwymiarowa, to drugi rozmiar tylko musimy
+	// w cout<<funkcja(tab) nie dajemy [] i liczby
+}
