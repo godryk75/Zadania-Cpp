@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool ifExists(int tab[], int rozmiar, int szukany)
+{	
+	for(int i=0; i<rozmiar; i++)
+	{
+		if(szukany == tab[i]) return true;
+	}
+	return false;
+}
+int main()
+{	int n = 10;
+	int tab[n] = {12,3,5,8,54,8,9,3,4,1};
+	int szukany = 12;
+	cout<<ifExists(tab, n, szukany);
+}
