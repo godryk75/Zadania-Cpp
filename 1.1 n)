@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+void ileSpelniaWarunek(int tab[], int rozmiar)
+{	
+	for(int i=0; i<rozmiar; i++)
+	{
+		if(tab[i]>3) cout<< tab[i] << " ";
+	}
+
+}
+int main()
+{	int rozmiar = 10;
+	int tab[rozmiar] = {1,5,8,3,67,9,3,45,1,3};
+	ileSpelniaWarunek(tab, rozmiar);
+	
+}
