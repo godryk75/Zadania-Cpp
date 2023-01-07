@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool czySympatyczna(string liczba)
+{
+	int licznik=0;
+	reverse(liczba.begin(), liczba.end());
+	for(int i=0;i<liczba.size()-1;i++)
+	{
+		if(liczba[i]>liczba[i+1]) licznik++;
+	}
+	if(licznik==liczba.size()-1) return true;
+	return false;
+}
+int main()
+{	
+	cout<<czySympatyczna("12035");
+	
+}
